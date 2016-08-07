@@ -1,0 +1,10 @@
+version: '2'
+services:
+    node:
+        image: node:latest
+        ports:
+            - 80:4200
+        volumes:
+            - .:/usr/share/app
+        working_dir: /usr/share/app
+        command: node_modules/.bin/ng serve
